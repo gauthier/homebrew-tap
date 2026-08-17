@@ -1,8 +1,8 @@
 class Passerelle < Formula
   desc "Self-hosted HTTP tunnel"
   homepage "https://github.com/gauthier/passerelle"
-  url "https://github.com/gauthier/passerelle/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "add331d870e19c16c93227c4258bd76095166cdc25d69cbd89e02b4bb068b58b"
+  url "https://github.com/gauthier/passerelle/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "e3c30646abe8ea835f12a37b27c5c7b5473becd81e555d828f54a31ffe859df8"
   license "Apache-2.0"
   head "https://github.com/gauthier/passerelle.git", branch: "main"
 
@@ -21,6 +21,6 @@ class Passerelle < Formula
   end
 
   test do
-    assert_match "enroll", shell_output("#{bin}/passerelle --help")
+    assert_match "auth", shell_output("#{bin}/passerelle --help")
   end
 end
